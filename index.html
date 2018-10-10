@@ -3,7 +3,8 @@
   <meta name="keywords" content="Funny Teacher——LiXueJiao 在线发牌" /> 
   <meta name="description" content="Funny Teacher——李X娇,在线发牌！'" /> 
   <script type="text/javascript">
-		function Start(){
+		function Start(obj){
+		obj.style.display='none';
 		changeColor();
 		}
 		function changeColor(){
@@ -25,6 +26,6 @@
   <title>Tony-马</title> 
  </head> 
  <body>
-	 <input type="button" value="Start" onclick="Start()" style="width: 1920px; height: 1080px;" />
+	 <input type="button" id=Fun value="Start" onclick="Start(this)" style="width: 800px; height: 400px;" />
  </body>
 </html>
