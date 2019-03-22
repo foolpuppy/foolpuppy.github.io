@@ -119,6 +119,3 @@ $ ssh -T [git@github.com](mailto:git@github.com)
 ## 使用Git
 
 然后自己去学习怎么使用Git吧
-## 使用Git
-
-然后自己去学习怎么使用Git吧
