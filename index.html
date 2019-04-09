@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <title>首页</title>
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="keywords"  content="顿添雄" />
+    <meta name="keywords" content="顿添雄"/>
     <!-- google fonts -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alegreya+Sans:regular,italic,bold,bolditalic">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nixie+One:regular,italic,bold,bolditalic">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alegreya+SC:regular,italic,bold,bolditalic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:regular,bold">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans:regular,italic,bold,bolditalic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nixie+One:regular,italic,bold,bolditalic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+SC:regular,italic,bold,bolditalic">
     <!-- css -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -20,6 +20,13 @@
     <script src="js/bootstrap.min.js"></script>
     <!--自定义脚本-->
     <script>
+        //Http转换成Https
+        function RedirNonHttps() {
+            if (location.src.indexOf("https://") === -1) {
+                location.src = location.src.replace("http://", "https://");
+            }
+        }
+
         //右边弹出框功能
         $(function () {
             $wrapper = $('#wrapper');
@@ -52,15 +59,15 @@
                  url=$(this).css('background-image');
                  url=url.split("(\"")[1].split("\")")[0];
                  */
-                url=$(this).css('background-image').split("(\"")[1].split("\")")[0];
-                $('.modal img').attr('src',url);
+                url = $(this).css('background-image').split("(\"")[1].split("\")")[0];
+                $('.modal img').attr('src', url);
                 $('.modal').modal('show');
             })
 
         })
     </script>
 </head>
-<body>
+<body onload="RedirNonHttps()">
 <!--侧边菜单-->
 <div id="drawer-right" style="margin-right: -300px;">
     <div class="cross text-right">
